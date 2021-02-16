@@ -1,0 +1,3 @@
+"N:\Progs\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\DS_Lab.dir/objects.a
+N:\MinGW\bin\ar.exe cr CMakeFiles\DS_Lab.dir/objects.a @CMakeFiles\DS_Lab.dir\objects1.rsp
+N:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\DS_Lab.dir/objects.a -Wl,--no-whole-archive  -o DS_Lab.exe -Wl,--out-implib,libDS_Lab.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DS_Lab.dir\linklibs.rsp

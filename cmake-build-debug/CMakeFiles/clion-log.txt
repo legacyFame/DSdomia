@@ -1,0 +1,4 @@
+"N:\Progs\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "N:\3D Objects\DSdomia"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: N:/3D Objects/DSdomia/cmake-build-debug
