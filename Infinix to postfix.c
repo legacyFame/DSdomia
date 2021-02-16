@@ -1,21 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
 #include <string.h>
-/** Postfix evaluation
- *
+/** Infinix to postfix
  * author - Hiro*/
 int main() {
     bool checkoperator(char op);
     int priority(char c);
     int top = -1, i = 0;
-    char *stk=" ", op;
-    char *exp = "1 + 2";
+    char *stk,op;
+    stk = (char *) malloc (100);
+    char *exp = "12 + 2 * 3";
     printf("Infinix expresion %s\n", exp);
     while (i < strlen(exp)) {
         op = exp[i];
         i++;
-        printf("Stk top %c %d \n",stk[top],top);
         if (op == ' ')
             continue;
         else if (checkoperator(op)) {
@@ -28,13 +28,12 @@ int main() {
             top++;
             stk[top] = op;
         } else if (isdigit(op)) {
-            char *string = "";
             while (isdigit(op)) {
-                strncat(string, &op, 1);
+                printf("%c",op); // for multi digit nos
                 op = exp[i];
                 i++;
             }
-            printf("%s ", string);
+            printf(" ");
         }
     }
     while(top>-1){
@@ -59,7 +58,3 @@ int priority(char c) {
     int priority = (c=='+')?1:((c=='-')?1:((c=='*')?2:((c=='^')?3:((c=='/')?2:((c==')')?9:0)))));
     return priority;
 }
-
-
-
-
