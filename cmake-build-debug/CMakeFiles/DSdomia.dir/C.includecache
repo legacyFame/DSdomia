@@ -7,4 +7,18 @@
 #IncludeRegexTransform: 
 
 N:/3D Objects/DSdomia/main.c
+stdio.h
+-
+string.h
+-
+split-string.c
+N:/3D Objects/DSdomia/split-string.c
+
+N:/3D Objects/DSdomia/split-string.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
 
