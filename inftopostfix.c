@@ -10,9 +10,11 @@ int main() {
     bool checkoperator(char op);
     int priority(char c);
     int top = -1, i = 0;
-    char *stk,*exp, op;
+    char *stk, *exp, op;
     stk = (char *) malloc(100);
-    exp = "12 + 2 * 3";
+//    exp = "12 + 2 * 3";
+    exp = (char *) malloc(100);
+    gets(exp);
     printf("Infinix expresion %s\n", exp);
     while (i < strlen(exp)) {
         op = exp[i];
@@ -21,7 +23,8 @@ int main() {
             continue;
         else if (checkoperator(op)) {
             while (top > -1 && priority(op) <= priority(stk[top])) {
-                printf("%c ", stk[top]);
+//              printf("%c ", stk[top]);
+                putchar(stk[top]);
                 top--;
             }
             if (op == ')' || op == '(')
