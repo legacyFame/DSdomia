@@ -61,6 +61,6 @@ bool checkoperator(char op) { // Not necessary isdigit should do everything .. j
 int priority(char c) {
     int priority = (c == '+') ? 1 : ((c == '-') ? 1 : ((c == '*') ? 2 : ((c == '^') ? 3 : ((c == '/') ? 2 : ((c == ')')
                                                                                                              ? 9
-                                                                                                             : 0)))));
+                                                                                                             : 9)))));
     return priority;
 }
