@@ -44,18 +44,20 @@ void display(){
 
 const char* deq(){
 if(isempty()){return "Empty";}
-else{
 sprintf(item,"%d",q[front]);
-front++;
-return item;} 
+front=front%size+1;
+if(front>=size){front=0;}
+if(front==rear){front=-1;}
+return item; 
 }
 
 void enq(){
    if(isfull()){printf("q overflow");return;}
    else{
    printf("Item????");
-   rear++;
    scanf("%d",&q[rear]);
+   rear = rear%size+1;
+   if(rear>=size){rear=0;}
    printf("Item added");
    if(front==-1){front++;}
    }
