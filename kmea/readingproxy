@@ -1,0 +1,6 @@
+https_proxy="https://172.16.0.3:3128/"
+ftp_proxy="ftp://172.16.0.3:3128/"
+socks_proxy="socks://172.16.0.3:3128/"
+
+
+nano /etc/environment

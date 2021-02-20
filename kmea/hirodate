@@ -1,0 +1,2 @@
+read date
+sudo date -s "Wed February $date 12:47:13 +05 2021"

@@ -6,7 +6,7 @@ enum V {
     a, b, c
 };
 
-bool visit(int arr[], int item, int size) {
+bool visit(const int arr[], int item, int size) {
     bool flag = false;
     for (int i = 0; i < size; i++) {
         if (arr[i] == item) {
@@ -19,28 +19,27 @@ bool visit(int arr[], int item, int size) {
 
 
 int main() {
-    char *adjmat, **rows, **row;
-    int *stk = (int *) malloc(100), top=-1,vi = -1, item;
-    adjmat = "0 1 1 , 1 0 1 , 1 1 0";
+    char **rows;
+    char **row;
+    int stk[c + 1], visited[c + 1], top = -1, vi = -1, item, vs = 3;
+    char adjmat[] = " 0 1 1 , 1 0 1 , 1 1 0 ";
     rows = split(adjmat, ",");
-    int size = len(adjmat, ",");
-    int visited[size];
-
     top++;
-    stk[top] = a; // 1st step
+    stk[top] = b; // 1st step
+    visited[vi] = stk[top]; //Advance visit
     while (top > -1) {
-        printf("%d",top);
         item = stk[top];
+        printf("\nItems-%d\n", item);
+//        printf(rows[item]);
         top--;
         vi++;
-        visited[vi] = item;
         row = split(rows[item], " ");
-        for (int i = 0; i < size; i++) {
-            if (toInt(row[i]) == 1) {
-                if (!visit(visited, i, vi)) {
-                    top++;
-                    stk[top]=i;
-                }
+        for (int i = a; i < vs; i++) {
+            if(toInt(row[i])==1 && !visit(visited, i, vi)) {
+                top++;
+                stk[top] = i;
+                vi++;
+                visited[vi] = i;
             }
         }
     }

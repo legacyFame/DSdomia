@@ -1,48 +1,37 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include "string.c"
+#include<stdlib.h>
 
-enum V {
-    a, b, c
+typedef struct node node;
+typedef struct SLL SLL;
+
+//typedef void (*fp)(SLL sl, int data);//function pointer fp
+// Return Type       ( * function pointer's variable name ) ( parameters )
+
+struct node {
+    int data;
+    struct node *next;
+} head;
+struct SLL {
+    node *head;
+    node *cur;
 };
 
-bool visit(const int arr[], int item, int size) {
-    bool flag = false;
-    for (int i = 0; i < size; i++) {
-        if (arr[i] == item) {
-            flag = true;
-            break;
-        }
-    }
-    return flag;
-}
-
+struct node* addNode(struct node* cur, int data) {
+    node *new = (node *) malloc(sizeof(node));
+    new->data = data;
+    cur->next=new;
+    cur = cur->next;
+};
 
 int main() {
-    char **rows;
-    char **row;
-    int stk[c + 1], visited[c + 1], top = -1, vi = -1, item, vs = 3;
-    char adjmat[] = " 0 1 1 , 1 0 1 , 1 1 0 ";
-    rows = split(adjmat, ",");
-    top++;
-    stk[top] = b; // 1st step
-    visited[vi] = stk[top]; //Advance visit
-    while (top > -1) {
-        item = stk[top];
-        printf("\nItems-%d\n", item);
-//        printf(rows[item]);
-        top--;
-        vi++;
-        row = split(rows[item], " ");
-        for (int i = a; i < vs; i++) {
-            if(toInt(row[i])==1 && !visit(visited, i, vi)) {
-                top++;
-                stk[top] = i;
-                vi++;
-                visited[vi] = i;
-            }
-        }
-    }
+    SLL s1;
+    s1.head = &head;
+    s1.cur = s1.head;
+    s1.head->next = s1.cur;
+    addNode(s1.cur, 2);
+    addNode(s1.cur, 23);
+    addNode(s1.cur, 232);
+    printf("%d",s1.head->data);
     return 0;
 }
 //// String manipulation
