@@ -1,64 +1,58 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <ctype.h>
-#include <string.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
 
-/** Infinix to postfix
- * author - Hiro*/
-int main() {
-    bool checkoperator(char op);
-    int priority(char c);
-    int top = -1, i = 0;
-    char *stk, *exp, op;
-    stk = (char *) malloc(100);
-//    exp = "12 + 2 * 3";
-    exp = (char *) malloc(100);
+int priority(char x){
+    int p = (x=='+')?1:(x=='-')?1:((x=='*')?2:((x=='/')?2:((x=='^')?3:((x=='(')?0:((x==')')?0:-1))))); //(x=='(')?9:
+    return p;
+}
+
+int main(){
+    char *exp = (char *)malloc(sizeof(100));
     gets(exp);
-    printf("Infinix expresion %s\n", exp);
-    while (i < strlen(exp)) {
-        op = exp[i];
+    char stk[100];
+    char x;
+    int i =0,top=-1;
+
+    while(i<strlen(exp)){
+        x=exp[i];
         i++;
-        if (op == ' ')
+        if(x==' ')
             continue;
-        else if (checkoperator(op)) {
-            while (top > -1 && priority(op) <= priority(stk[top])) {
-//              printf("%c ", stk[top]);
-                putchar(stk[top]);
-                top--;
-            }
-            if (op == ')' || op == '(')
-                continue;
-            top++;
-            stk[top] = op;
-        } else if (isdigit(op)) {
-            while (isdigit(op)) {
-                printf("%c", op); // for multi digit nos
-                op = exp[i];
+        if(isdigit(x)|| priority(x)==-1){ // For var A B like A+B
+            printf("%c",x);
+            x=exp[i];
+            while(isdigit(x)){ //muttidigit
+                printf("%c",x);
                 i++;
+                x=exp[i];
             }
             printf(" ");
         }
-    }
-    while (top > -1) {
-        printf("%c ", stk[top]);
-        top--;
-    }
-}
-
-bool checkoperator(char op) { // Not necessary isdigit should do everything .. just to ensure other symbols ..
-    char operators[] = {'+', '-', '/', '^', '*', ')', '('};
-    bool flag = false;
-    for (int i = 0; i < 7; i++) {
-        if (op == operators[i]) {
-            flag = true;
-            break;
+        else if(x==')'){
+            while(top>-1 &&  stk[top]!='('){
+                printf("%c ",stk[top]);
+                top--;
+            }
+            top--;
+        }
+        else if(x=='('){
+            top++;
+            stk[top]=x;
+        }
+        else{
+            while(top>-1 &&  priority(x)<=priority(stk[top])){
+                printf("%c ",stk[top]);
+                top--;
+            }
+            top++;
+            stk[top]=x;
         }
     }
-    return flag;
-}
-
-int priority(char c) {
-    int priority = (c == '+') ? 1 : ((c == '-') ? 1 : ((c == '*') ? 2 : ((c == '^') ? 3 : ((c == '/') ? 2 : 9)))); //9 for ) and (
-    return priority;
+    while(top>-1){
+        printf("%c ",stk[top]);
+        top--;
+    }
+    return 0;
 }
