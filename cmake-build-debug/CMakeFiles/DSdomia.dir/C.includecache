@@ -9,4 +9,6 @@
 N:/3D Objects/DSdomia/main.c
 stdio.h
 -
+stdlib.h
+-
 
