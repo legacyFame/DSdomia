@@ -5,6 +5,12 @@
 #include <stdbool.h>
 #include <string.h>
 
+char* input(){ //safest way using pointer to get string in for strlen to work properly
+    char *str = (char *) malloc(sizeof(1000));
+    gets(str); //takes 1st line
+    return str;
+}
+
 char** split(char str[], char delims[]) {
     char *token = strtok(str, delims);
     char **answer= (char **) malloc(sizeof(token)*50);

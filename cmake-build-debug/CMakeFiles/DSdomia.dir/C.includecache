@@ -11,4 +11,16 @@ stdio.h
 -
 stdlib.h
 -
+string.c
+N:/3D Objects/DSdomia/string.c
+
+N:/3D Objects/DSdomia/string.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
 
