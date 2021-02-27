@@ -9,7 +9,7 @@
 N:/3D Objects/DSdomia/main.c
 stdio.h
 -
-stdlib.h
+stdbool.h
 -
 string.c
 N:/3D Objects/DSdomia/string.c

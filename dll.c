@@ -6,8 +6,6 @@
 #pragma ide diagnostic ignored "EndlessLoop"
 typedef struct node node;
 typedef struct DLL DLL;
-//typedef void (*fp)(DLL sl, int data);//function pointer fp
-// Return Type       ( * function pointer's variable name ) ( parameters )
 
 struct node {
     int data;
@@ -41,7 +39,7 @@ void *addNode() {
     new->next = NULL;
     new->prev = d1.tail;
     d1.tail->next = new;
-    d1.tail = new;
+    d1.tail = d1.tail->next;
     return NULL;
 }
 
@@ -53,15 +51,15 @@ void *delNode() {
     d1.cur = d1.head->next;
     while (d1.cur != NULL) {
         if (d1.cur->data == data) {
-            if (d1.tail->data == data) d1.tail = d1.tail->prev;
+            if (d1.tail == d1.cur) d1.tail = d1.tail->prev;
             d1.cur->next->prev = d1.cur->prev;
-            d1.cur->prev = d1.cur->next;
+            d1.cur->prev->next = d1.cur->next;
             free(d1.cur);
             return NULL;
         }
         d1.cur = d1.cur->next;
     }
-    printf("Not in DLL");
+    puts("Not in DLL");
     return NULL;
 }
 
@@ -74,7 +72,7 @@ void *search() {
         d1.cur = d1.cur->next;
         pos++;
     }
-    if (d1.cur->data == data) printf("\nPresent %d", pos);
+    if (d1.cur->data == data) printf("Present %d", pos);
     else puts("Not Present");
     return pos;
 }
@@ -89,7 +87,7 @@ int main() {
     while (1) {
         printf("\n1. Append 2. Delete 3.Display 4.Search ");
         scanf("%d", &x);
-        choice = (x == 1) ? addNode() : ((x == 2) ? delNode() : ((x == 4)) ? search() : traversal());
+        choice = (x == 1) ? addNode() : ((x == 2) ? delNode() : ((x == 4)) ? (int *) search() : traversal());
     }
     return 0;
 }

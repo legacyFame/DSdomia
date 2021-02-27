@@ -14,3 +14,10 @@
 //    printf("%s HHS",str);
 //return 0;
 //}
+
+//Expirement
+
+//    int arr[] = {1,2,3};
+//    char *ar1 = (char *) arr;
+//    puts(ar1);
+//    printf("%c",sizeof(arr));

@@ -48,7 +48,7 @@ void *delNode() {
     printf("Node?");
     scanf("%d", &data);
     s1.cur = s1.head;
-    while (s1.cur->next != NULL) {
+    while (s1.cur->next!=NULL) {
         if (s1.cur->next->data == data) {
             s1.cur->next = s1.cur->next->next;
             if (s1.tail->data == data)
@@ -60,6 +60,7 @@ void *delNode() {
     printf("\nNot in SLL");
     return NULL;
 }
+
 void *search(){
     int data = 0,pos=0;
     printf("Node?");
