@@ -44,7 +44,7 @@ char* toString(char *str, int no) { // usage - char *str; str = toString(str,100
     return str;
 }
 bool isequal(char str[], char str1[]){
-    if(str==str1)
+    if(str==str1)   //not correct better if you use some methods in string.h  or manually run a for loop
         return true;
     return false;
 }

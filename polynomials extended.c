@@ -15,16 +15,8 @@ struct poly {
     node *head;
     node *cur;
     node *temp;
-} A, B, C;
 
-void append(poly *p, int exp, int cf) {
-    node *new = (node *) malloc(sizeof(node));
-    new->coef = cf;
-    new->exp = exp;
-    new->next = NULL;
-    p->cur->next = new;
-    p->cur = p->cur->next;
-}
+} A, B, C;
 
 void *inialize(poly *p) {
     node *head = (node *) malloc(sizeof(node));
@@ -34,8 +26,14 @@ void *inialize(poly *p) {
     puts("COEF EXP");
     char *in = input();
     while (strlen(in) > 0) {
+        node *new = (node *) malloc(sizeof(node));
         char **li = split(in, " ");
-        append(p, toInt(li[1]), toInt(li[0]));
+//        if(sizeof(li)/sizeof(li[0]) <2) continue;
+        new->exp = toInt(li[1]);
+        new->coef = toInt(li[0]);
+        new->next = NULL;
+        p->cur->next = new;
+        p->cur = p->cur->next;
         puts("COEF EXP");
         in = input();
     }
@@ -58,25 +56,45 @@ void *add() {
     chead.next = NULL;
     C.head = &chead;
     C.cur = C.head;
+    int exp, cf;
     while (A.temp != NULL && B.temp != NULL) {
+        node *new = (node *) malloc(sizeof(node));
         if (A.temp->exp == B.temp->exp) {
-            append(&C, A.temp->exp, A.temp->coef + B.temp->coef);
+            exp = A.temp->exp;
+            cf = A.temp->coef + B.temp->coef;
             A.temp = A.temp->next;
             B.temp = B.temp->next;
         } else if (A.temp->exp < B.temp->exp) {
-            append(&C, B.temp->exp, B.temp->coef);
+            exp = B.temp->exp;
+            cf = B.temp->coef;
             B.temp = B.temp->next;
         } else {
-            append(&C, A.temp->exp, A.temp->coef);
+            exp = A.temp->exp;
+            cf = A.temp->coef;
             A.temp = A.temp->next;
         }
+        new->coef = cf;
+        new->exp = exp;
+        new->next = NULL;
+        C.cur->next = new;
+        C.cur = C.cur->next;
     }
     while (A.temp != NULL) {
-        append(&C, A.temp->exp, A.temp->coef);
+        node *new = (node *) malloc(sizeof(node));
+        new->coef = A.temp->coef;
+        new->exp = A.temp->exp;
+        new->next = NULL;
+        C.cur->next = new;
+        C.cur = C.cur->next;
         A.temp = A.temp->next;
     }
     while (B.temp != NULL) {
-        append(&C, B.temp->exp, B.temp->coef);
+        node *new = (node *) malloc(sizeof(node));
+        new->next = NULL;
+        new->coef = B.temp->coef;
+        new->exp = B.temp->exp;
+        C.cur->next = new;
+        C.cur = C.cur->next;
         B.temp = B.temp->next;
     }
     display(&C);
@@ -90,8 +108,13 @@ void *mul() {
     C.cur = C.head;
     w1:
     while (A.temp != NULL) {
-        while (B.temp != NULL)   {
-            append(&C, A.temp->exp + B.temp->exp, A.temp->coef * B.temp->coef);
+        node *new = (node *) malloc(sizeof(node));
+        new->next = NULL;
+        while (B.temp != NULL) {
+            new->coef = A.temp->coef * B.temp->coef;
+            new->exp = A.temp->exp + B.temp->exp;
+            C.cur->next = new;
+            C.cur = C.cur->next;
             B.temp = B.temp->next;
             goto w1; //break not working
         }
