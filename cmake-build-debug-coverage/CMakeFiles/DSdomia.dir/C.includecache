@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+N:/3D Objects/DSdomia/main.c
+stdio.h
+-
+string.h
+-
+string.c
+N:/3D Objects/DSdomia/string.c
+
+N:/3D Objects/DSdomia/string.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
+
