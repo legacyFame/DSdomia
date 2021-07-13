@@ -53,10 +53,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "N:\Progs\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "N:\Padfoot\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "N:\Progs\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "N:\Padfoot\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,15 +79,15 @@ include CMakeFiles/DSdomia.dir/flags.make
 CMakeFiles/DSdomia.dir/main.c.obj: CMakeFiles/DSdomia.dir/flags.make
 CMakeFiles/DSdomia.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="N:\3D Objects\DSdomia\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DSdomia.dir/main.c.obj"
-	N:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\DSdomia.dir\main.c.obj   -c "N:\3D Objects\DSdomia\main.c"
+	N:\Padfoot\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\DSdomia.dir\main.c.obj   -c "N:\3D Objects\DSdomia\main.c"
 
 CMakeFiles/DSdomia.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSdomia.dir/main.c.i"
-	N:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "N:\3D Objects\DSdomia\main.c" > CMakeFiles\DSdomia.dir\main.c.i
+	N:\Padfoot\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "N:\3D Objects\DSdomia\main.c" > CMakeFiles\DSdomia.dir\main.c.i
 
 CMakeFiles/DSdomia.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSdomia.dir/main.c.s"
-	N:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "N:\3D Objects\DSdomia\main.c" -o CMakeFiles\DSdomia.dir\main.c.s
+	N:\Padfoot\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "N:\3D Objects\DSdomia\main.c" -o CMakeFiles\DSdomia.dir\main.c.s
 
 # Object files for target DSdomia
 DSdomia_OBJECTS = \

@@ -11,10 +11,10 @@
 				<Option working_dir="N:/3D Objects/DSdomia/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DSdomia">
@@ -24,15 +24,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSdomia"/>
-					<CompileFile command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSdomia"/>
+					<CompileFile command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DSdomia/fast">
@@ -42,35 +42,35 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="n:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="n:\padfoot\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSdomia/fast"/>
-					<CompileFile command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSdomia/fast"/>
+					<CompileFile command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="N:/3D Objects/DSdomia/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="N:/3D Objects/DSdomia/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="N:/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="N:/Padfoot/MinGW/bin/mingw32-make.exe -f &quot;N:/3D Objects/DSdomia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>

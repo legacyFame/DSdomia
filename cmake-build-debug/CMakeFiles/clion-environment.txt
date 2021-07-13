@@ -1,4 +1,4 @@
-ToolSet: 5.4 (local)@N:\MinGW
+ToolSet: 5.4 (local)@N:\Padfoot\MinGW
 Options: 
 
-Options:
+Options:-DCMAKE_C_COMPILER=N:/Padfoot/MinGW/bin/gcc.exe
