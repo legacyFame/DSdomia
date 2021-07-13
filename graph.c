@@ -34,8 +34,7 @@ void DFS(graph G) {
     stk[top++] = a; // 1st step
     visited[vi++] = a; //Advance visit
     while (top > 0) {
-        item = stk[top - 1];
-        top--;
+        item = stk[top--];
         printf("\nItems-%d\n", item);
         row = split(rows[item], " ");
         for (int i = a; i < vs; i++) {
@@ -75,7 +74,7 @@ int main() {
     char adjmat[100];
     gets(adjmat);
     G1.adjmat = adjmat;
-    G1.vc = 4;
+    G1.vc = 3;
 //    DFS(G1);
 //    BFS(G1);
     return 0;
