@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 N:/3D Objects/DSdomia/main.c
-stdio.h
+Wire.h
+-
+LCD.h
+-
+LiquidCrystal_I2C.h
 -
 
